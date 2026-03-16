@@ -8,9 +8,11 @@ Site de álbum de fotos virtual para casais, com estética de polaroids e anota�
 
 ```
 album-virtual/
-├── index.html   # Página principal 
+├── index.html   # Página principal (HTML + CSS + JS em um único arquivo)
 └── README.md    # Este arquivo
 ```
+
+> CSS e JavaScript estão embutidos no `index.html`. A separação em arquivos individuais (`style.css` e `script.js`) está prevista como próximo passo.
 
 ## Funcionalidades
 
@@ -38,12 +40,5 @@ album-virtual/
 
 - HTML5, CSS3 e JavaScript puro (sem frameworks)
 - Fontes: [Permanent Marker](https://fonts.google.com/specimen/Permanent+Marker), [Caveat](https://fonts.google.com/specimen/Caveat) e [Reenie Beanie](https://fonts.google.com/specimen/Reenie+Beanie) via Google Fonts
-
-## Próximos passos
-
-- [ ] Separar CSS e JS em arquivos próprios (`style.css` e `script.js`)
-- [ ] Persistência de dados (localStorage ou backend)
-- [ ] Capa personalizada com nomes do casal
-- [ ] Linha do tempo / ordem cronológica
-- [ ] Modo de visualização em tela cheia por foto
+ ] Modo de visualização em tela cheia por foto
 - [ ] Exportar álbum como PDF
