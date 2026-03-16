@@ -8,7 +8,9 @@ Site de álbum de fotos virtual para casais, com estética de polaroids e anota�
 
 ```
 album-virtual/
-├── index.html   # Página principal (HTML + CSS + JS em um único arquivo)
+├── index.html   # Página principal
+├── style.css    # Design
+├── script.js    # Animações e "Backend"
 └── README.md    # Este arquivo
 ```
 
