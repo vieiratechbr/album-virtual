@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Álbum Virtual ♥</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Reenie+Beanie&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1>💕 Álbum Virtual</h1>
+    <div class="heart-divider"><span>♥</span></div>
+    <div class="subtitle">cada foto, uma memória. cada palavra, um amor.</div>
+    <br>
+    <button class="add-btn" onclick="openModal()">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <line x1="12" y1="5" x2="12" y2="19"/>
+        <line x1="5" y1="12" x2="19" y2="12"/>
+      </svg>
+      Adicionar Memória
+    </button>
+  </div>
+
+  <div class="album-grid" id="albumGrid">
+    <div class="empty-state" id="emptyState">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c9a090" stroke-width="1.5">
+        <rect x="3" y="3" width="18" height="18" rx="2"/>
+        <circle cx="8.5" cy="8.5" r="1.5"/>
+        <polyline points="21 15 16 10 5 21"/>
+      </svg>
+      <p>Sua história começa aqui... ♥</p>
+    </div>
+  </div>
+
+  <div class="modal-bg" id="modalBg">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <h2>Nova Memória ♥</h2>
+
+      <label>Foto</label>
+      <div class="img-upload-area" onclick="document.getElementById('imgInput').click()" id="uploadArea">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c9a090" stroke-width="1.5" style="margin-bottom:8px">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <polyline points="21 15 16 10 5 21"/>
+        </svg><br>
+        <span>Clique para escolher uma foto</span>
+      </div>
+      <input type="file" id="imgInput" accept="image/*" style="display:none" onchange="previewImg(event)">
+
+      <label>Legenda da foto</label>
+      <input type="text" id="captionInput" placeholder="ex: nossa primeira viagem...">
+
+      <label>Texto no papel</label>
+      <textarea id="textInput" rows="4" placeholder="Escreva aqui suas memórias, sentimentos, histórias..."></textarea>
+
+      <label>Data</label>
+      <input type="text" id="dateInput" placeholder="ex: 14 de fevereiro, 2022">
+
+      <div class="modal-btns">
+        <button class="btn-cancel" onclick="closeModal()">Cancelar</button>
+        <button class="btn-save" onclick="saveMemory()">Salvar ♥</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
